@@ -20,10 +20,10 @@ public final class Constants {
   public static class Drive {
 
   // Drive hardware 
-  public static final SparkMax.ID LEFT_FRONT_DRIVE_MOTOR_ID = new SparkMax.ID(2, "DriveHardware/Swerve/LeftFront/Drive");
-  public static final SparkMax.ID LEFT_REAR_DRIVE_MOTOR_ID = new SparkMax.ID(3, "DriveHardware/Swerve/LeftRear/Drive");
-  public static final SparkMax.ID RIGHT_FRONT_DRIVE_MOTOR_ID = new SparkMax.ID(4, "DriveHardware/Swerve/RightFront/Drive");
-  public static final SparkMax.ID RIGHT_REAR_DRIVE_MOTOR_ID = new SparkMax.ID(5, "DriveHardware/Swerve/RightRear/Drive");
+  public static final SparkMax.ID LEFT_FRONT_DRIVE_MOTOR_ID = new SparkMax.ID(2, "DriveHardware/LeftFront/Drive");
+  public static final SparkMax.ID LEFT_REAR_DRIVE_MOTOR_ID = new SparkMax.ID(3, "DriveHardware/LeftRear/Drive");
+  public static final SparkMax.ID RIGHT_FRONT_DRIVE_MOTOR_ID = new SparkMax.ID(4, "DriveHardware/RightFront/Drive");
+  public static final SparkMax.ID RIGHT_REAR_DRIVE_MOTOR_ID = new SparkMax.ID(5, "DriveHardware/RightRear/Drive");
   }
   
   public static class Global {

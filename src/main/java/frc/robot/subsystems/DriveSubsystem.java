@@ -19,18 +19,16 @@ public class DriveSubsystem extends SubsystemBase {
 
   // Initializes hardware, including boolean isHardwareReal for simulations
   public static class Hardware {
-    private boolean isHardwareReal;
     private SparkMax lMasterMotor, rMasterMotor;
     private SparkMax lSlaveMotor, rSlaveMotor;
     private AHRS navx;
 
-    public Hardware(boolean isHardwareReal,
+    public Hardware(
         SparkMax lMasterMotor,
         SparkMax rMasterMotor,
         SparkMax lSlaveMotor,
         SparkMax rSlaveMotor,
         AHRS navx) {
-      this.isHardwareReal = isHardwareReal;
       this.lMasterMotor = lMasterMotor;
       this.rMasterMotor = rMasterMotor;
       this.lSlaveMotor = lSlaveMotor;
@@ -66,7 +64,7 @@ public class DriveSubsystem extends SubsystemBase {
 
     // Sets master motors inverted
     m_rMasterMotor.setInverted(true);
-    m_lMasterMotor.setInverted(true);
+    m_rSlaveMotor.setInverted(true);
 
     // Makes slaves follow masters
     m_lSlaveMotor.follow(m_lMasterMotor);
@@ -83,7 +81,6 @@ public class DriveSubsystem extends SubsystemBase {
    */
   public static Hardware initializeHardware(boolean isHardwareReal) {
     Hardware drivetrainHardware = new Hardware(
-      isHardwareReal,
       new SparkMax(Constants.Drive.LEFT_FRONT_DRIVE_MOTOR_ID, MotorType.kBrushless),
       new SparkMax(Constants.Drive.RIGHT_FRONT_DRIVE_MOTOR_ID, MotorType.kBrushless),
       new SparkMax(Constants.Drive.LEFT_REAR_DRIVE_MOTOR_ID, MotorType.kBrushless),
